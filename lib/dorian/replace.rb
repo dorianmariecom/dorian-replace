@@ -1,5 +1,5 @@
 module Dorian
-  class Each
+  class Replace
     def self.run
       if ARGV.size < 3
         puts "USAGE: dorian-replace FROM TO FILES..."
