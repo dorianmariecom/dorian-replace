@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'dorian/replace'
+Dorian::Replace.run
