@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "dorian-replace"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
   s.summary = "Evaluates some code on each line of the input"
   s.description = 'e.g. `replace "cool" "coolest" *.md`'
   s.authors = ["Dorian Marié"]
