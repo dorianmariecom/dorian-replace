@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "dorian-replace"
-  s.version = "0.1.6"
+  s.version = "0.2.0"
   s.summary =
     "Replace some string with some other string from the files provided"
   s.description =
