@@ -2,7 +2,7 @@ module Dorian
   class Replace
     def self.run
       if ARGV.size < 3
-        puts 'USAGE: replace FROM TO FILES...'
+        puts "USAGE: replace FROM TO FILES..."
         exit
       end
 
