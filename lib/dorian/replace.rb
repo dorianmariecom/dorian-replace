@@ -1,7 +1,7 @@
 module Dorian
   class Replace
     def self.run
-      if ARGV.size < 2
+      if ARGV.size < 2 || ARGV[0] == "--help" || ARGV[0] == "-h"
         puts "USAGE: replace FROM TO FILES..."
         puts "USAGE: ... | replace FROM TO"
         exit

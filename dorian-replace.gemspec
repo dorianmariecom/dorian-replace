@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "dorian-replace"
-  s.version = "0.2.0"
+  s.version = "0.3.0"
   s.summary =
     "Replace some string with some other string from the files provided"
   s.description =
@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.executables << "replace"
   s.homepage = "https://github.com/dorianmariefr/replace"
   s.license = "MIT"
+  s.metadata = { "rubygems_mfa_required" => "true" }
 end
