@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Dorian
   class Replace
     def self.run
@@ -9,10 +11,11 @@ module Dorian
 
       from = ARGV[0]
       to = ARGV[1]
-      files = ARGV.size > 2 ? ARGV[2..-1] : STDIN.each_line.to_a.map(&:strip)
+      files = (ARGV.size > 2) ? ARGV[2..] : $stdin.each_line.to_a.map(&:strip)
 
       files.each do |file|
         next if File.directory?(file)
+
         File.write(file, File.read(file).gsub(from, to))
       end
     end
