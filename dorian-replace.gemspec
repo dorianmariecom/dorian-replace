@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = "dorian@dorianmarie.fr"
   s.files = ["lib/dorian/replace.rb"]
   s.executables << "replace"
-  s.homepage = "https://github.com/dorianmariefr/replace"
+  s.homepage = "https://github.com/dorianmariecom/replace"
   s.license = "MIT"
   s.metadata = { "rubygems_mfa_required" => "true" }
 end
