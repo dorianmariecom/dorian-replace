@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
     "Replace some string with some other string from the files provided"
   s.description = "#{s.summary}\n\ne.g. `replace \"cool\" \"coolest\" *.md`"
   s.authors = ["Dorian Marié"]
-  s.email = "dorian@dorianmarie.fr"
+  s.email = "dorian@dorianmarie.com"
   s.files = ["bin/replace"]
   s.executables << "replace"
   s.homepage = "https://github.com/dorianmariecom/replace"
