@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "spec_helper"
 require "securerandom"
 require "tmpdir"
@@ -10,6 +12,10 @@ RSpec.describe "git-ls-ruby-files" do
     `bin/replace hello goodbye #{tempfile.path}`
     expect(File.read(tempfile)).to eq("goodbye goodbye hella")
   ensure
-    File.delete(tempfile) rescue nil
+    begin
+      File.delete(tempfile)
+    rescue StandardError
+      nil
+    end
   end
 end
