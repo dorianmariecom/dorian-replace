@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 require "spec_helper"
-require "securerandom"
-require "tmpdir"
 require "tempfile"
 
-RSpec.describe "git-ls-ruby-files" do
+RSpec.describe "replace" do
   it "works" do
     tempfile = Tempfile.create
     File.write(tempfile, "hello hello hella")
