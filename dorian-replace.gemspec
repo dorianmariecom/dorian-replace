@@ -3,9 +3,8 @@
 Gem::Specification.new do |s|
   s.name = "dorian-replace"
   s.version = "0.5.1"
-  s.summary =
-    "Replace some string with some other string from the files provided"
-  s.description = "#{s.summary}\n\ne.g. `replace \"cool\" \"coolest\" *.md`"
+  s.summary = "replaces string with other string from files"
+  s.description = s.summary
   s.authors = ["Dorian Marié"]
   s.email = "dorian@dorianmarie.com"
   s.files = ["bin/replace"]
