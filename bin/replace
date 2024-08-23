@@ -1,18 +1,20 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-if ARGV.size < 2 || ARGV[0] == "--help" || ARGV[0] == "-h"
-  puts "USAGE: replace FROM TO FILES..."
-  puts "USAGE: ... | replace FROM TO"
-  exit
+require "dorian/arguments"
+
+parsed = Dorian::Arguments.parse(version: { alias: :v }, help: { alias: :h })
+
+abort parsed.help if parsed.options.help
+
+if parsed.options.version
+  abort File.read(File.expand_path("../../VERSION", __FILE__))
 end
 
-from = ARGV[0]
-to = ARGV[1]
-files = ARGV.size > 2 ? ARGV[2..] : $stdin.each_line.to_a.map(&:strip)
+from, to = parsed.arguments
+files = parsed.files.any? ? parsed.files : $stdin.each_line.to_a.map(&:strip)
 
 files.each do |file|
   next if File.directory?(file)
-
   File.write(file, File.read(file).gsub(from, to))
 end
