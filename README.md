@@ -1,28 +1,41 @@
 # `dorian-replace`
 
-Replace some string with some other string from the files provided
+Replace text in files.
 
-e.g. `replace "cool" "coolest" *.md`
-
-### Install
+## Install
 
 ```bash
 gem install dorian-replace
 ```
 
-Or as part of my other gems:
+Also included in the aggregate gem:
 
 ```bash
 gem install dorian
 ```
 
-### Usage
-
-From my history:
+## Usage
 
 ```bash
-replace "WorldCountry.spain" "WorldCountry.by_name('Espagne')" test/**/*
-replace "Né(e) à l'étranger / Outre-Mer" "Né(e) à l'étranger" test/**/*
-git grep -l " doc " app/assets/ | xargs replace " doc " " document "
-git grep -l "={doc}" | xargs replace "={document}"
+replace from to [file ...]
+```
+
+Run `replace -h` for generated option details and `replace -v` for the installed version.
+
+## Notes
+
+- If no files are passed, reads file paths from stdin. Directories are skipped.
+
+## Examples
+
+### Replace text in Markdown files
+
+```bash
+replace old-name new-name README.md docs/*.md
+```
+
+### Use with git grep
+
+```bash
+git grep -l old-name | replace old-name new-name
 ```
